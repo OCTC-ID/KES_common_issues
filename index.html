@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOLA Course Reviews: Common Issues and Simple Fixes | OCTC</title>
+<style>
+  :root {
+    --navy: #0F2347;
+    --gold: #E9B425;
+    --ink: #1E2633;
+    --muted: #55607A;
+    --line: #C9D3E3;
+    --tint: #F4F6FA;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: #fff;
+  }
+  a { color: #0B4A9E; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; background: #fff; padding: 8px 12px; z-index: 10; }
+
+  header {
+    background: var(--navy);
+    color: #fff;
+    border-bottom: 6px solid var(--gold);
+    padding: 40px 20px 32px;
+  }
+  header a { color: #fff; }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  header p.kicker {
+    margin: 0 0 6px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.2; }
+  header p { margin: 0; max-width: 62ch; }
+
+  main { padding: 28px 20px 48px; }
+
+  nav.toc {
+    background: var(--tint);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+  }
+  nav.toc h2 { margin: 0 0 8px; font-size: 18px; color: var(--navy); }
+  nav.toc ol { margin: 0; padding-left: 22px; }
+  nav.toc li { margin: 4px 0; }
+
+  section.topic {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 12px;
+  }
+  section.topic h2 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--navy);
+  }
+  .kes {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 2px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    background: #FBEFC9;
+    border-left: 4px solid var(--gold);
+    border-radius: 3px;
+  }
+  section.topic h3 { margin: 20px 0 6px; font-size: 18px; color: var(--navy); }
+  section.topic p { margin: 0 0 12px; }
+  section.topic ul, section.topic ol { margin: 0 0 12px; padding-left: 24px; }
+  section.topic li { margin: 5px 0; }
+
+  .note {
+    margin: 14px 0;
+    padding: 12px 16px;
+    background: var(--tint);
+    border-left: 4px solid var(--navy);
+    border-radius: 3px;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; }
+  caption { text-align: left; font-weight: 600; color: var(--navy); padding-bottom: 6px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 12px; border: 1px solid var(--line); }
+  thead th { background: var(--navy); color: #fff; }
+  tbody th { font-weight: 600; background: var(--tint); width: 38%; }
+
+  .video { margin-top: 18px; }
+  .video .frame {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: var(--tint);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video .soon {
+    margin: 0;
+    padding: 14px 16px;
+    background: var(--tint);
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .video .newtab { margin: 6px 0 0; font-size: 15px; }
+
+  .top { font-size: 15px; margin: 14px 0 0; }
+
+  footer {
+    border-top: 6px solid var(--gold);
+    background: var(--navy);
+    color: #fff;
+    padding: 24px 20px;
+    font-size: 16px;
+  }
+  footer a { color: #fff; }
+  footer p { margin: 0 0 6px; }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 26px; }
+    section.topic h2 { font-size: 21px; }
+    tbody th { width: 45%; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">OCTC eLearning</p>
+    <h1>KOLA Course Reviews: Common Issues and Simple Fixes</h1>
+    <p>These are the issues I see most often in KOLA reviews, each with a manageable way to address it and a short video. If your review feedback sent you here, jump to the topic you need.</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+  <nav class="toc" aria-label="Topics on this page">
+    <h2>Topics</h2>
+    <ol>
+      <li><a href="#organization">Course organization and learning modules</a> (KES 1.4)</li>
+      <li><a href="#module-overviews">Module overviews</a> (KES 1.1, 1.8, 1.9)</li>
+      <li><a href="#accessibility-documents">Accessibility: PDFs, Word documents, and images</a></li>
+      <li><a href="#accessibility-slides">Accessibility: PowerPoint and AI-generated decks</a></li>
+      <li><a href="#rubrics">Rubrics and assessment grading</a> (KES 3.1)</li>
+      <li><a href="#outside-activities">Participation and outside activities</a> (KES 2.7)</li>
+      <li><a href="#student-feedback">Student feedback throughout the course</a></li>
+      <li><a href="#start-here">A useful Start Here module</a></li>
+      <li><a href="#technology">Course technology instructions and support</a> (KES 4.17)</li>
+    </ol>
+  </nav>
+
+  <!-- ============================================================
+       HOW TO ADD A VIDEO
+       Paste the Loom share link between the quotes in data-loom.
+       Example: data-loom="https://www.loom.com/share/abc123def456"
+       Leave it empty ("") and the page shows "Video coming soon."
+       ============================================================ -->
+
+  <!-- 1 -->
+  <section class="topic" id="organization">
+    <h2>Course organization and learning modules</h2>
+    <p class="kes">KES 1.4</p>
+    <p>Chunk your content by week, unit, or topic so students can see how the course is laid out and where they are in it.</p>
+    <p>I recommend Blackboard learning modules for this. They give you added controls and let you add a module image.</p>
+    <div class="note">
+      <p><strong>Recommendation, not requirement.</strong> You do not have to use the learning module tool. What matters is that your content is clearly chunked.</p>
+    </div>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 2 -->
+  <section class="topic" id="module-overviews">
+    <h2>Module overviews</h2>
+    <p class="kes">KES 1.1, 1.8, and 1.9</p>
+    <p>Give each module a dedicated space for three things: the learning objectives, why the content matters, and instructions for completing the work.</p>
+    <h3>A simple outline you can reuse</h3>
+    <ul>
+      <li><strong>What you'll learn</strong>: the learning objectives for the module (KES 1.1)</li>
+      <li><strong>Why it matters</strong>: how this content connects to the course, the program, or the job (KES 1.8)</li>
+      <li><strong>What to do</strong>: the steps for working through the module (KES 1.9)</li>
+      <li><strong>What to submit</strong>: the graded work and when it is due (KES 1.9)</li>
+    </ul>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 3 -->
+  <section class="topic" id="accessibility-documents">
+    <h2>Accessibility: PDFs, Word documents, and images</h2>
+    <p><strong>The goal:</strong> an Ally score of 85% or higher, with no red items.</p>
+    <p><strong>Where to look:</strong> in your Blackboard course, open <strong>Books &amp; Tools</strong> in the right-hand menu. The <strong>Ally Accessibility Report</strong> is at the top of the list.</p>
+    <table>
+      <caption>Common issues and their fixes</caption>
+      <thead>
+        <tr><th scope="col">Common issue</th><th scope="col">Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Scanned PDF</th><td>Run OCR (text recognition) so the page contains real text instead of a picture of text.</td></tr>
+        <tr><th scope="row">Document with no structure</th><td>Use the built-in styles (Heading 1, Heading 2, and so on) instead of bolding or enlarging text by hand.</td></tr>
+        <tr><th scope="row">Table with no headers</th><td>Identify the header row in the table's settings.</td></tr>
+        <tr><th scope="row">Image with no description</th><td>Add meaningful alt text that says what the image shows and why it is there.</td></tr>
+      </tbody>
+    </table>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 4 -->
+  <section class="topic" id="accessibility-slides">
+    <h2>Accessibility: PowerPoint and AI-generated decks</h2>
+    <ul>
+      <li>Use the built-in slide layouts and placeholders rather than free-floating text boxes.</li>
+      <li>Add alt text to informative images.</li>
+      <li>Mark purely decorative objects as decorative.</li>
+      <li>Check the reading order on each slide.</li>
+    </ul>
+    <div class="note">
+      <p><strong>Attractive slides still need an accessibility review.</strong> This includes decks made with AI tools. A deck can look polished and still be unreadable to a screen reader.</p>
+    </div>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 5 -->
+  <section class="topic" id="rubrics">
+    <h2>Rubrics and assessment grading</h2>
+    <p class="kes">KES 3.1</p>
+    <p>Tell students how they earn points on discussions, essays, reflections, and projects.</p>
+    <p>A rubric can be a short statement or a checklist. It does not need to be a large grid, and it does not need to be built into Blackboard.</p>
+    <h3>Example</h3>
+    <div class="note">
+      <p><strong>A full-credit response includes:</strong></p>
+      <ul>
+        <li>An original post that answers every part of the prompt</li>
+        <li>At least one specific reference to this week's reading</li>
+        <li>Replies to two classmates by the due date</li>
+      </ul>
+    </div>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 6 -->
+  <section class="topic" id="outside-activities">
+    <h2>Participation and outside activities</h2>
+    <p class="kes">KES 2.7</p>
+    <p>If your course requires observation hours, community service, or a similar activity, explain three things:</p>
+    <ul>
+      <li><strong>The requirements</strong>: what students must do and by when</li>
+      <li><strong>The documentation</strong>: how students show they completed it</li>
+      <li><strong>The impact on the grade</strong>: how it counts</li>
+    </ul>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 7 -->
+  <section class="topic" id="student-feedback">
+    <h2>Student feedback throughout the course</h2>
+    <p>Give students a way to tell you how the course is going while it is still running. Two easy options:</p>
+    <ul>
+      <li>An open feedback discussion forum</li>
+      <li>A short student feedback survey</li>
+    </ul>
+    <p>A midterm reflection is another option.</p>
+    <div class="note">
+      <p>I have components ready to copy into your course. <a href="mailto:stephanie.self@kctcs.edu">Email me</a> and I will send them over.</p>
+    </div>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 8 -->
+  <section class="topic" id="start-here">
+    <h2>A useful Start Here module</h2>
+    <p>A Start Here module brings together what students need before the coursework begins:</p>
+    <ul>
+      <li>Instructor contact information</li>
+      <li>Syllabus</li>
+      <li>Course policies</li>
+      <li>Netiquette</li>
+      <li>Blackboard tutorials</li>
+      <li>Technology help</li>
+      <li>OCTC support resources</li>
+    </ul>
+    <div class="note">
+      <p>I am developing Start Here resources that faculty can use in their own courses. <a href="mailto:stephanie.self@kctcs.edu">Ask me</a> what is available.</p>
+    </div>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+  <!-- 9 -->
+  <section class="topic" id="technology">
+    <h2>Course technology instructions and support</h2>
+    <p class="kes">KES 4.17</p>
+    <p>For each third-party platform your course uses, I recommend a clearly labeled module that contains:</p>
+    <ul>
+      <li>Access instructions</li>
+      <li>Tutorials</li>
+      <li>Support links</li>
+      <li>Guidance about where students complete their work and where they submit it</li>
+    </ul>
+    <div class="video" data-loom=""></div>
+    <p class="top"><a href="#main">Back to topics</a></p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Stephanie Self</strong>, Instructional Designer and eLearning Coordinator, Owensboro Community &amp; Technical College</p>
+    <p>Questions about your review? <a href="mailto:stephanie.self@kctcs.edu">stephanie.self@kctcs.edu</a></p>
+  </div>
+</footer>
+
+<script>
+// Turns each <div class="video" data-loom="..."> into an embedded Loom player.
+// Empty data-loom shows a "Video coming soon" note instead.
+document.querySelectorAll('.video').forEach(function (box) {
+  var link = (box.getAttribute('data-loom') || '').trim();
+  var match = link.match(/loom\.com\/(?:share|embed)\/([A-Za-z0-9]+)/);
+  var heading = box.closest('section').querySelector('h2');
+  var topic = heading ? heading.textContent : 'this topic';
+
+  if (!match) {
+    var soon = document.createElement('p');
+    soon.className = 'soon';
+    soon.textContent = 'Video coming soon.';
+    box.appendChild(soon);
+    return;
+  }
+
+  var id = match[1];
+
+  var frame = document.createElement('div');
+  frame.className = 'frame';
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.loom.com/embed/' + id;
+  iframe.title = 'Video: ' + topic;
+  iframe.loading = 'lazy';
+  iframe.allowFullscreen = true;
+  frame.appendChild(iframe);
+  box.appendChild(frame);
+
+  var p = document.createElement('p');
+  p.className = 'newtab';
+  var a = document.createElement('a');
+  a.href = 'https://www.loom.com/share/' + id;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.textContent = 'Open the video for "' + topic + '" in a new tab';
+  p.appendChild(a);
+  box.appendChild(p);
+});
+</script>
+
+</body>
+</html>
